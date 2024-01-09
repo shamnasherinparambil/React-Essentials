@@ -1,50 +1,17 @@
 import Header from "./components/Header";
-import { CORE_CONCEPTS } from "./data";
-import CoreConcepts from "./components/CoreConcepts";
-import TabButton from "./components/TabButton";
+import CoreComponents from "./components/CoreComponents";
+import Example from "./components/Example";
 
-function App() {
-  function handleClick(){
+function App() { 
 
-  }
   return (
-    <div>
+    <>
       <Header />
       <main>
-        <section id="core-concepts">
-          <h2>Core Concepts</h2>
-          <ul>
-            <CoreConcepts
-              title={CORE_CONCEPTS[0].title}
-              description={CORE_CONCEPTS[0].description}
-              image={CORE_CONCEPTS[0].image}
-            />
-            <CoreConcepts {...CORE_CONCEPTS[1]} />
-            <CoreConcepts {...CORE_CONCEPTS[2]} />
-            <CoreConcepts {...CORE_CONCEPTS[3]} />
-          </ul>
-        </section>
-        <section id="examples">
-          <h2>Examples</h2>
-
-          <menu>
-            <TabButton onSelect={handleClick}>
-              Components
-            </TabButton>
-            <TabButton onSelect={handleClick}>
-              JSX
-            </TabButton>
-            <TabButton onSelect={handleClick}>
-              Props
-            </TabButton>
-            <TabButton onSelect={handleClick}>
-              States
-            </TabButton>
-            
-          </menu>
-        </section>
+        <CoreComponents />
+        <Example/>
       </main>
-    </div>
+    </>
   );
 }
 
